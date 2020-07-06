@@ -4,11 +4,11 @@
    tasks:
     - name: installing webserviceon ubuntu node
       apt:
-       name: "{{ linuxserver }}"
+       name: "{{linuxserver}}"
        state: present
       when:   ansible_os_family =="Debian"
     - name: installing webserveron redhat node
       yum:
-        name: "{{ redhatsrever }}"
+        name: "{{redhatsrever}}"
         state: present
       when:   ansible_os_family =="RedHat"
