@@ -1,5 +1,5 @@
 ---
- - hosts: [applicationserver]
+ - hosts: [wbservers]
    become: yes
    tasks:
     - name: installing webserviceon ubuntu node
