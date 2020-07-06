@@ -1,2 +1,10 @@
+[applicationserver]
 172.31.4.171
+172.31.2.29
+
+[dbsrvers]
+172.31.4.171
+
+
+[wbserver]
 172.31.2.29
