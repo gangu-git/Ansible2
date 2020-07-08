@@ -1,11 +1,10 @@
 ---
  - hosts: [wbservers]
    become: yes
-   tasks:
-    - name: 
-       vars: 
+   vars: 
         package_1: git
         package_2: tree
+   tasks:   
     - name: installing webserviceon ubuntu node
       apt:
        name: "{{linuxserver}}"
