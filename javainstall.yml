@@ -1,5 +1,5 @@
 ---
-  - hosts: [wbservers]
+  - hosts: 172.31.4.171,172.31.2.29
     become: yes
     tasks:
       - name: installing java on ubuntu node
