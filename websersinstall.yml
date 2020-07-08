@@ -25,6 +25,7 @@
       apt:
         name: "{{package_1}}"
         state: present
+      when:  ansible_os_family =="Debian"
     - name: i want dispaly my package_1
       debug:
         msg: "{{package_1}}"
@@ -32,6 +33,7 @@
       yum:
         name: "{{package_2}}"
         state: present
+      when:   ansible_os_family =="RedHat"
     - name: dispaly my package_2
       debug:
         msg: "{{package_2}}"
