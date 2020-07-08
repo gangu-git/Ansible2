@@ -8,13 +8,19 @@
     - name: installing webserviceon ubuntu node
       apt:
        name: "{{linuxserver}}"
-       state: absent
+       state: present
       when:   ansible_os_family =="Debian"
     - name: installing webserveron redhat node
       yum:
         name: "{{redhatsrever}}"
-        state: absent
+        state: present
       when:   ansible_os_family =="RedHat"
+    - name: updateing ubuntu node
+      command:  sudo apt-get update
+      when:  ansible_os_family =="Debian"
+    - name: i wnat dispaly my update
+      debug:
+        msg: up_to_date
     - name: i wnat install git on ubuntu
       apt:
         name: "{{package_1}}"
