@@ -18,7 +18,7 @@
     - name: restarting httpd service
       service:
         name: httpd
-        state: restart
+        state: restarted
     - name: updateing ubuntu node
       command:  sudo apt-get update
       when:  ansible_os_family =="Debian"
