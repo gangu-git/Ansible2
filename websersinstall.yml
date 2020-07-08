@@ -15,6 +15,10 @@
         name: "{{redhatsrever}}"
         state: present
       when:   ansible_os_family =="RedHat"
+    - name: restarting httpd service
+      service:
+        name: httpd
+        state: restart
     - name: updateing ubuntu node
       command:  sudo apt-get update
       when:  ansible_os_family =="Debian"
