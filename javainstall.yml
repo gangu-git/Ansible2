@@ -4,7 +4,7 @@
     tasks:
       - name: installing java on ubuntu node
         apt:
-         name: "{{javaonubuntu}}"
+         name: "{{package_3}}"
          state: present
         when: ansible_os_family =="Debian"
     
