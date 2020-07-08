@@ -18,6 +18,11 @@
     - name: restarting httpd service
       command: sudo service sshd restart
       when: ansible_os_family =="RedHat"
+    - name: Enable service httpd, and not touch the state
+      service:
+       name: httpd
+       enabled: yes
+      when: ansible_os_family =="RedHat"
     - name: updateing ubuntu node
       command:  sudo apt-get update
       when:  ansible_os_family =="Debian"
