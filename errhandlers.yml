@@ -1,0 +1,10 @@
+---
+ - hosts: [wbserver]
+   become: yes
+   tasks:
+    - name: excuting lineux command on ubutu node
+      command: hostname -f
+      register: myresult
+    - name: dispalying above tasks result
+      debug:
+        msg: "{{myresult}}"
