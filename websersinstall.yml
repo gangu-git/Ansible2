@@ -2,13 +2,33 @@
  - hosts: [wbservers]
    become: yes
    tasks:
+    - name: 
+       vars: 
+        package_1: git
+        package_2: tree
     - name: installing webserviceon ubuntu node
       apt:
        name: "{{linuxserver}}"
-       state: present
+       state: absent
       when:   ansible_os_family =="Debian"
     - name: installing webserveron redhat node
       yum:
         name: "{{redhatsrever}}"
-        state: present
+        state: absent
       when:   ansible_os_family =="RedHat"
+    - name: i wnat install git on ubuntu
+      apt:
+        name: "{{package_1}}"
+        state: present
+    - name: i want dispaly my package_1
+      debug:
+        msg: "{{package_1}}"
+    - name: installing tree on redhat node
+      yum:
+        name: "{{package_2}}"
+        state: present
+    - name: dispaly my package_2
+      debug:
+        msg: "{{package_2}}"
+
+    
