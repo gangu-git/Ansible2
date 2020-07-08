@@ -16,7 +16,7 @@
         state: present
       when:   ansible_os_family =="RedHat"
     - name: restarting httpd service
-      command: service sshd restart
+      command: sudo service sshd restart
       when: ansible_os_family =="RedHat"
     - name: updateing ubuntu node
       command:  sudo apt-get update
