@@ -1,6 +1,6 @@
 ---
 
-    - name: creating file and including paly
+    - name: i want to create file in on nodes
       file:
-       path: /home/ubuntu/myfiletext
-       state: touch 
+      path: /home/ubuntu/mytextfile
+      state: touch
