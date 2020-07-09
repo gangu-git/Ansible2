@@ -2,5 +2,5 @@
 
     - name: i want to create file in on nodes
       file:
-       path: /home/ubuntu/g1file
+       path: /etc/g1file
        state: touch
