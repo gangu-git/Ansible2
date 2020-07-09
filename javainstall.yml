@@ -1,5 +1,5 @@
 ---
-  - hosts: 172.31.2.29
+  - hosts: 172.31.5.209
     become: yes
     tasks:
       - name: installing java on ubuntu node
