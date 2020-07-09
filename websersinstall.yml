@@ -10,11 +10,13 @@
        name: "{{linuxserver}}"
        state: present
       when:   ansible_os_family =="Debian"
+      tags: linux
     - name: installing webserveron redhat node
       yum:
         name: "{{redhatsrever}}"
         state: present
       when:   ansible_os_family =="RedHat"
+      tags: redhat
     - name: restarting httpd service
       command: sudo service sshd restart
       when: ansible_os_family =="RedHat"
