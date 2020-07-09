@@ -4,6 +4,6 @@
     tasks:
       - name: installing java on ubuntu node
         apt:
-         name: "{{installtree}}"
+         name: "{{javaonubuntu}}"
          state: present
       
