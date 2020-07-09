@@ -1,5 +1,5 @@
 ---
- - hosts: [wbservers]
+ - hosts: [dbsrvers]
    become: yes
    tasks:
     - name: creating g1file through including paly
