@@ -1,5 +1,5 @@
 ---
- - host: [wbservers]
+ - hosts: [wbservers]
    become: yes
    tasks:
     - name: creating file and including paly
