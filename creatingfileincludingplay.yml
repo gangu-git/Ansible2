@@ -1,6 +1,5 @@
 ---
   - hosts: [dbsrvers]
-    become: yes
     tasks:
      - name: i want to create file in on nodes
        file:
