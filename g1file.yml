@@ -1,0 +1,6 @@
+---
+ - hosts: [wbservers]
+   become: yes
+   tasks:
+    - name: creating g1file through including paly
+      include: creatingfile-includingplay.yml
