@@ -45,5 +45,18 @@
     - name: dispaly my package_2
       debug:
         msg: "{{package_2}}"
+    - name: copy the jinjafile into index.html
+      template: 
+        src: jinjafile.j2
+        dest: /var/www/html/index.html  
+      notify: wbserverrestart
+      when: ansible_os_family =="Debian"
+
+   handlers: 
+    - name: wbserverrestart
+      service:
+        name: apache2
+        state: started
+        
 
     
