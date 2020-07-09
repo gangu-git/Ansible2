@@ -1,7 +1,5 @@
 ---
- - hosts: [dbsrvers]
-   become: yes
-   tasks:
+
     - name: creating file and including paly
       file:
        path: /home/ubuntu/g1file
