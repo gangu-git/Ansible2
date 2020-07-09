@@ -1,7 +1,5 @@
 ---
-  - hosts: [dbsrvers]
-    tasks:
-     - name: i want to create file in on nodes
-       file:
+    - name: i want to create file in on nodes
+      file:
         dest: /home/ubuntu/g2file
         state: touch
