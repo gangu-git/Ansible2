@@ -1,4 +1,4 @@
 ---
  key: valus
  installtree: tree
- javaonubuntu: java8
+ javaonubuntu: openjdk-8-jdk
