@@ -2,5 +2,5 @@
 
     - name: creating file and including paly
       file:
-       path: /home/ubuntu/g1file.txt
+       path: /home/ubuntu/myfiletext
        state: touch 
