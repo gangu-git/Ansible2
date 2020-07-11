@@ -1,2 +1,9 @@
 ---
-# tasks file for mytomcatrole
+# tasks file for mytom8onU16
+- include: myjavainstall.yml
+- include: tomusergrp.yml
+- include: installtom.yml
+- include: extdir.yml
+- include: changpermissions.yml
+- include: tomconfig.yml
+- include: demonstart.yml

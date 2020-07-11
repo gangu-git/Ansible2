@@ -1,0 +1,5 @@
+---
+ - hosts: [wbserver]
+   become: yes
+   role:
+    - mytomcatrole
