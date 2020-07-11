@@ -8,9 +8,9 @@
 
 - name: i want to extract tar file
   command:
-   cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
+   cmd: sudo tar xzvf  /home/ubuntu/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
    creates: /otp/tomcat/LICENSE
-   src: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+   src:  /home/ubuntu/apache-tomcat-8.5.5.tar.gz
    dest: /opt/tomcat
    remote_src: yes
   
