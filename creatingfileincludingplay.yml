@@ -1,5 +1,5 @@
 ---
     - name: i want to create file in on nodes
-      files:
-        dest: /home/ubuntu/gangu1
+      file:
+        path: /home/ubuntu/gangu1
         state: touch
