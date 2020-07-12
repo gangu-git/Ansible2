@@ -1,5 +1,5 @@
 ---
- - hosts: [wbserver]
+ - hosts: 172.31.5.209
    become: yes
    tasks:
     - name: excuting lineux command on ubutu node
