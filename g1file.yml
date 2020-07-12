@@ -1,5 +1,5 @@
 ---
- - hosts: 172.31.5.209
+ - hosts: [wbservers]
    become: yes
    tasks:
     - name: creating g1file through including paly
