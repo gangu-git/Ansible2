@@ -1,5 +1,5 @@
 ---
- - hosts: [dbsrvers]
+ - hosts: 172.31.5.209
    become: yes
    tasks:
     - name: creating g1file through including paly
