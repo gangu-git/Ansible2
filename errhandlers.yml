@@ -8,3 +8,12 @@
     - name: dispalying above tasks result
       debug:
         msg: "{{myresult}}"
+    - name: if error occurce install tree
+      apt:
+       name: tree
+       state: present
+      when: myresult.stderr !=""
+    - name: if error not occurce install git
+      apt: 
+       name: git
+      when: myresult.stderr ==""
