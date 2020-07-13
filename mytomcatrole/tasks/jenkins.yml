@@ -1,0 +1,5 @@
+---
+ - name: insatlling jenkins url on tomcate webapplication
+   get_url:
+    url: http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+    dest: /opt/tomcat/webapps/jenkins.war
