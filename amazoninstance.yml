@@ -1,5 +1,5 @@
 ---
-  - hosts: localhost
+  - hosts: 172.31.5.209
     become: yes 
     tasks: 
      - name: creating instance with this palybook
