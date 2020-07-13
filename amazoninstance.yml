@@ -24,5 +24,5 @@
         count: 1
         vpc_subnet: default
         assing_public_ip: yes
-        aws_access_key: AKIAJNXBBEI4UQTMXV6Q
-        Aws_secret_key: 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 
+        aws_access_key: 
+        Aws_secret_key: 
