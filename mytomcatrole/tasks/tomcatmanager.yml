@@ -1,6 +1,6 @@
 --- 
  - name: copy the manager xml file into node
-   templatete:
+   template:
     src: template/tommanager.j2
     dest: /opt/tomcat/webapps/manager/META-INF/context.xml
  - name: copy the host manager xml file in to node
