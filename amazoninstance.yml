@@ -2,6 +2,17 @@
   - hosts: 172.31.5.209
     become: yes 
     tasks: 
+     - name: install python on node 
+       apt:
+        name: python 
+        state: present
+     - name: install boto on node
+       apt: 
+        name: python-boto
+        state: present
+       service: 
+        name: python-boto
+        state: started
      - name: creating instance with this palybook
        ec2:
         key_name: devopsg
