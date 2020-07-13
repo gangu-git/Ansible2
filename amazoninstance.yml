@@ -1,5 +1,5 @@
 ---
-  - hosts: webserver
+  - hosts: localhost
     become: yes 
     tasks: 
      name: creating instance with this palybook
