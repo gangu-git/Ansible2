@@ -7,7 +7,7 @@
 - include: changpermissions.yml
 - include: tomconfig.yml
 - include: demonstart.yml
-- include: tomcat-users.yml
+- include: tomcatusers.yml
 - include: tomcatmanager.yml
 - include: tomrestart.yml
 - include: jenkins.yml
