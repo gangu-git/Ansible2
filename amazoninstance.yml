@@ -8,7 +8,6 @@
     image: ami-03b8a287edc0c1253
     region: ap-south-1
     wait: yes
-    count: 1
     vpc_subnet: default
     assing_public_ip: yes
     aws_access_key:  AKIAJNXBBEI4UQTMXV6Q
