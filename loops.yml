@@ -1,7 +1,7 @@
 ---
   - hosts: all
     become: yes
-    task: 
+    tasks: 
       - name: practiceing Standard loops in ansible
         apt:
           name: "{{ items }}"
