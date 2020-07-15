@@ -1,28 +1,18 @@
 ---
   - hosts: 172.31.5.209
-    become: yes 
-    tasks: 
-     - name: install python on node 
-       apt:
-        name: python 
-        state: present
-     - name: install boto on node
-       apt: 
-        name: python-boto
-        state: present
-     - name: restart service python-boto
-       service: 
-        name: python-boto
-        state: started
+    become: yes
+    tasks:
      - name: creating instance with this palybook
        ec2:
+        aws_access_key: AKIAJNXBBEI4UQTMXV6Q
+        aws_secret_key: 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
         key_name: devopsg
         instance_type: t2.micro
         image: ami-03b8a287edc0c1253
-        region: ap-south-1
+        region: ec2.us-west-2.amazonaws.com
         wait: yes
-        count: 1
-        vpc_subnet: default
-        assing_public_ip: yes
-        aws_access_key: AKIAJNXBBEI4UQTMXV6Q
-        Aws_secret_key: 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 
+        count: 2
+        vpc_subnet_id:
+        assign_public_ip: 
+         
+    
