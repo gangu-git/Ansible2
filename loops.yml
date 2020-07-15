@@ -1,5 +1,5 @@
 ---
-  - host: all
+  - hosts: all
     become: yes
     task: 
       - name: practiceing Standard loops in ansible
