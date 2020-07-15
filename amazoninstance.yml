@@ -11,8 +11,16 @@
         image: ami-03b8a287edc0c1253
         region: ec2.us-west-2.amazonaws.com
         wait: yes
+<<<<<<< HEAD
         count: 2
         vpc_subnet_id:
         assign_public_ip: 
          
     
+=======
+        count: 1
+        vpc_subnet: default
+        assing_public_ip: yes
+        aws_access_key: 
+        Aws_secret_key: 
+>>>>>>> 349485aa0610f27710d9784c9e617268dbacd91e
