@@ -4,7 +4,7 @@
     tasks: 
       - name: practiceing Standard loops in ansible
         apt:
-          name: "{{ items }}"
+          name: "{{ item }}"
           state: present
         loop: 
          - git
