@@ -1,0 +1,12 @@
+---
+  - host: all
+    become: yes
+    task: 
+      - name: practiceing Standard loops in ansible
+        apt:
+          name: "{{ items }}"
+          state: present
+    loop: 
+      - git
+      - tree
+      - apache2
