@@ -6,7 +6,7 @@
         apt:
           name: "{{ items }}"
           state: present
-    loop: 
-      - git
-      - tree
-      - apache2
+        loop: 
+         - git
+         - tree
+         - apache2
