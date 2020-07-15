@@ -5,8 +5,8 @@
      - name: creating instance with this palybook
        ec2:
         state: present
-        aws_access_key: {{"awsacckey"}}
-        aws_secret_key: {{"awsseckey"}}
+        aws_access_key: awsacckey 
+        aws_secret_key: awsseckey 
         key_name: devopsg
         instance_type: t2.micro
         image: ami-03b8a287edc0c1253
