@@ -1,19 +1,17 @@
 ---
   - hosts: localhost
-    become: yes 
-    tasks: 
+    become: yes
+    tasks:
      - name: creating instance with this palybook
        ec2:
         key_name: devopsg
         group: launch-wizard-18
         instance_type: t2.micro
-        image: ami-0c57ea9d0d26b1f7e
-        region: us-west-2
-        instance_tags:		
+        image: ami-01a46261f54625524
+        region: ap-south-1
+        instance_tags:
          name: ansiblenodes
         wait: yes
         count: 2
-        vpc_subnet_id: subnet-b1f085fd 
-        assign_public_ip: yes 
-         
-    
+        vpc_subnet_id: subnet-b1f085fd
+        assign_public_ip: yes
