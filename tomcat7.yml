@@ -1,0 +1,5 @@
+---
+ - hosts: 172.31.3.30
+   become: yes
+   roles:
+    - tomcat7role
