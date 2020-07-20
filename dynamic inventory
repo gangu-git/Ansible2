@@ -1,0 +1,63 @@
+creating a dynamic inventory means (autometically creating aws instance by ansible user with help of ec2.py,ec2.ini file)
+
+=> localhost passwordless authentication 
+  ssh localhost
+=> creating ec2.py ,ec2.ini files on ansible user(ansible master server)
+      $ vi ec2.py (copy paste the matter in the below link)
+      https://fossies.org/linux/misc/ansible-2.9.10.tar.gz/ansible-2.9.10/contrib/inventory/ec2.py?m=t
+=> creating ec2.ini (copy paste the matter in the below link)
+   https://fossies.org/linux/misc/ansible-2.9.10.tar.gz/ansible-2.9.10/contrib/inventory/ec2.ini?m=t  
+=>  then chenage the file permissions
+     sudo chmod 755 ec2.py ec2.ini
+ => seting environment veriables
+ export EC2_ini_PATH="/home/gangu/ec2.ini"
+ export ANSIBLE_HOSTS="/home/gangu/ec2.py"
+ => creat a .boto file (in this file we provied aws credestials)(in user )
+  vi .boto
+  [Credentials]
+  aws_access_key_id = 
+  aws_secret_access_key = 
+  
+ => now creat a yml file creating instance through ansible node aim image id
+    ---
+  - hosts: localhost
+    become: yes
+    tasks:
+     - name: creating instance with this palybook
+       ec2:
+        key_name: devopsg
+        group: launch-wizard-18
+        instance_type: t2.micro
+        image: ami-0868d718d196e666c
+        region: ap-south-1
+        instance_tags:
+         Name: ansible_nodes
+        wait: yes
+        count: 2
+        vpc_subnet_id: subnet-b1f085fd
+        assign_public_ip: yes
+   =>> by executing this we got two nodes in aws with same instance tag Name: ansible_nodes
+   this are all autometically by useing ansible master server through ansible user
+   => then create a yml file for insatlling package on node (which contains tag Name: ansile_node )
+   like this
+   ---
+ - hosts: vpc_id_vpc_06657b6e (with the hlp of gathering facts we can assgin hosts : list) 
+   become: yes
+   tasks:
+    - nmae: installing apache2 on dynamicnodes
+      apt:
+       name: apache2
+       state: present
+ -----------------------------------------------------------------------------------------------------------
+ command for creating ansible user level dynamic invetroy file
+  
+  => $ ./ec2.py --list   (this command shows details of nodes)
+  => ansible -i ec2.py -u gangu vpc_id_vpc06657b6e -m ping (this command for connection  checking of nodes )
+  => ansible-playbook -i ec2.py -u gangu ymalfile name (to run playbook for nodes)
+       
+       
+       
+       
+       
+       
+       
