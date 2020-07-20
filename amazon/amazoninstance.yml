@@ -10,7 +10,7 @@
         image: ami-01a46261f54625524
         region: ap-south-1
         instance_tags:
-         name: ansiblenodes
+         Name: ansiblenodes
         wait: yes
         count: 2
         vpc_subnet_id: subnet-b1f085fd
