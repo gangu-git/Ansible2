@@ -10,3 +10,5 @@
 - include: tomcatusers.yml
 - include: tomcatmanager.yml
 - include: tomrestart.yml
+- include: gameoflife.yml
+- include: tomrestart.yml
