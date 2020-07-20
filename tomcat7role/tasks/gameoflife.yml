@@ -1,5 +1,5 @@
 ---
  - name: installing gameoflif java application on ubuntu node with tomcatwebappliction 7
    get_url: 
-    url: https://github.com/sandeepyarramshetty/game-of-life.git
-    dest: /opt/tomcat/webapps/game-of-life.git
+    url: $ wget https://github.com/Inoryy/game-of-life-java/releases/download/0.1/gof-java.jar
+    dest: /opt/tomcat/webapps/gof-java.jar
