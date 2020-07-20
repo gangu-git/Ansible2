@@ -1,2 +1,12 @@
 ---
-# tasks file for tomcat7role
+# tasks file for tomcat7role---
+- include: myjavainstall.yml
+- include: tomusergrp.yml
+- include: installtom.yml
+- include: extdir.yml
+- include: changpermissions.yml
+- include: tomconfig.yml
+- include: demonstart.yml
+- include: tomcatusers.yml
+- include: tomcatmanager.yml
+- include: tomrestart.yml

@@ -1,0 +1,8 @@
+---
+ - hosts: vpc_id_vpc_06657b6e
+   become: yes
+   tasks:
+    - nmae: installing apache2 on dynamicnodes
+      apt:
+       name: apache2
+       state: present
